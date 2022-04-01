@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy April Fools' Day</title>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
@@ -19,6 +21,7 @@
         }
         body{
             background-color: #081c15;
+            overflow-y: hidden;
         }
 
         #box{
@@ -44,6 +47,7 @@
         model-viewer{
             width: 40%;
             height: 600px;
+            animation: animate 10s linear infinite;
         }
         #demo{
             color: #95d5b2;
@@ -68,6 +72,17 @@
                 height: 50vh;
             }
         }
+
+        @keyframes animate {
+            0%, 100%{
+                transform: translateY(-60px);
+            }
+            50%{
+                transform: translateY(60px);
+            }
+        }
+
+        
         </style>
 
 
@@ -79,30 +94,24 @@
     <div id="box">
         <h1>Happy April Fools' Day! 🤪</h1>
         <p id="demo"></p>
-        
-
-        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-        <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
         <model-viewer src="rabbit.gltf" alt="rabbit" auto-rotate camera-controls ></model-viewer>
-
-        
     </div>
 </body>
 
 <script>
     
-    const text = ['欢迎你来到这里！', '恭喜你,你太走运了！', '你将获得由我提供的超值大奖', '但务必请阅读完一下重要提示', '你是怎样来的？', '朋友介绍的', '哈哈呵呵', '你被他忽悠了！', '别难过了~~~', '他或许是和你开玩笑的', '哎，真是的！', '可是你怎么能推出去呢？', '我也没办法', '要不。。。', '把website关了吧！', '什么？你不愿意关？', '那怎么办呢？', '让我再想想', '对不起，实在没有办法了！','那怎么办？', '你已经出不去了', '那我跟你说个故事', '从前有个人。。。', '故事完了', '别别别走', '不玩了 问你个问题 答对了放你走']
+    const text = ['欢迎光临！', '首先祝您节日快乐', '今天是您的大日子', '让我来为你歌唱', '祝您愚人节快乐', '好的谢谢请登出', '哈哈哈出不去吧', '不然你不就别出去了吧', '你是逃不出我的手掌心的哈哈哈', '看在今天是你的节日的份上', '就让你出去吧', '但是你要回答一个问题']
     
     for (var i = 0; i < text.length; i++) {
         alert(text[i])
     }
-    let person = prompt("你有男朋友吗 有的话请放下他的名字 (没有的话请放no)", "");
+    let person = prompt("蓝欣盈是不是这个世界上最美的人 （yes or no）", "yes");
     
 
-    if(person == "文涛"){
-        document.getElementById("demo").innerHTML = "原来是宝贝啊~ 我爱你~❣️";
+    if(person == "yes"){
+        document.getElementById("demo").innerHTML = "哎哟不要这样我会害羞的 🥺";
     }else if(person == "no"){
-        document.getElementById("demo").innerHTML = "原来你没有 aiya 😭";
+        document.getElementById("demo").innerHTML = "骗人 蓝欣盈明明是世界上最美的人 😭";
     }
 
 </script>
