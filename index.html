@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Happy April Fools' Day</title>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
     <style>
         /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap'); */
@@ -38,7 +38,12 @@
 <body>
     <!-- <div id="box">
         <h1>Happy April Fools' Day</h1> -->
-        <model-viewer src="rabbit.gltf" camera-controls auto-rotate></model-viewer>
+        <!--Imports a model-viewer JavaScript code -->
+<!--It helps to handle how the 3D Object would be displayed -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+<model-viewer src="rabbit.gltf" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer>
+
         <!-- <model-viewer alt="rabbit" src="rabbit.gltf" ar ar-modes="webxr scene-viewer quick-look" environment-image="shared-assets/environments/moon_1k.hdr" poster="shared-assets/models/NeilArmstrong.webp" seamless-poster shadow-intensity="1" camera-controls enable-pan></model-viewer> -->
     <!-- </div> -->
 </body>
