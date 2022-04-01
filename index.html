@@ -82,6 +82,18 @@
             }
         }
 
+        button {
+            background-color: #d8f3dc; /* Green */
+            border: none;
+            color: #081c15;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 10px;
+            }
+
         
         </style>
 
@@ -93,12 +105,16 @@
 <body>
     <div id="box">
         <h1>Happy April Fools' Day! 🤪</h1>
+        <button onclick="playAudio()" type="button">不要按我！！</button>
         <p id="demo"></p>
         <model-viewer src="rabbit.gltf" alt="rabbit" auto-rotate camera-controls ></model-viewer>
     </div>
 </body>
 
 <script>
+    
+    var audio = new Audio('potato.mp3');
+    
     
     const text = ['欢迎光临！', '首先祝您节日快乐', '今天是您的大日子', '让我来为你歌唱', '祝您愚人节快乐', '好的谢谢请登出', '哈哈哈出不去吧', '不然你不就别出去了吧', '你是逃不出我的手掌心的哈哈哈', '看在今天是你的节日的份上', '就让你出去吧', '但是你要回答一个问题']
     
@@ -114,5 +130,12 @@
         document.getElementById("demo").innerHTML = "骗人 蓝欣盈明明是世界上最美的人 😭";
     }
 
+    function playAudio(){
+        audio.play();
+    }
+    
+    
+
 </script>
+
 </html>
